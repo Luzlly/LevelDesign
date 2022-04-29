@@ -16,16 +16,6 @@ public class ButtonOff : MonoBehaviour
         txtToDisplay.SetActive(false);
     }
 
-    private void Update()
-    {
-        if (PlayerInZone && Input.GetMouseButtonDown(0))            //if in zone and press Left Click
-
-        {
-            gameObject.GetComponent<AudioSource>().Play();
-            gameObject.GetComponent<Animator>().Play("switch");
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")     //if player in zone
