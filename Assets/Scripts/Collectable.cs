@@ -17,6 +17,10 @@ public class Collectable : MonoBehaviour
 
     public GameObject lightorobj3;
 
+    public CollectableCount counter;
+
+
+
 
     private void Start()
     {
@@ -29,6 +33,8 @@ public class Collectable : MonoBehaviour
     {
         if (PlayerInZone && Input.GetMouseButtonDown(0))           //if in zone and press Left Click
         {
+            counter.count++;
+
             gameObject.GetComponent<AudioSource>().Play();
             txtToDisplay.SetActive(false);
             lightorobj.SetActive(!lightorobj.activeSelf);
