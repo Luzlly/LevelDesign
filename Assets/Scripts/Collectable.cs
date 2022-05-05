@@ -15,32 +15,30 @@ public class Collectable : MonoBehaviour
 
     public GameObject lightorobj2;
 
-    public GameObject lightorobj3;
-
     public CollectableCount counter;
 
-
-
+    public Renderer rend;
 
     private void Start()
     {
-
         PlayerInZone = false;                   //player not in zone       
         txtToDisplay.SetActive(false);
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
     }
 
     private void Update()
     {
         if (PlayerInZone && Input.GetMouseButtonDown(0))           //if in zone and press Left Click
         {
+            
             counter.count++;
-
-            gameObject.GetComponent<AudioSource>().Play();
             txtToDisplay.SetActive(false);
+            gameObject.GetComponent<AudioSource>().Play();
             lightorobj.SetActive(!lightorobj.activeSelf);
             lightorobj1.SetActive(!lightorobj1.activeSelf);
             lightorobj2.SetActive(!lightorobj2.activeSelf);
-            lightorobj3.SetActive(!lightorobj3.activeSelf);
+            rend.enabled = false;
         }
     }
 

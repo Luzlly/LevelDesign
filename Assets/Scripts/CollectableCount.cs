@@ -21,7 +21,7 @@ public class CollectableCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count == 3 )
+        if (count == 4 )
         {
             obj1.SetActive(!obj1.activeSelf);
             obj2.SetActive(!obj2.activeSelf);
