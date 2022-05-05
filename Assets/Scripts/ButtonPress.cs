@@ -20,7 +20,7 @@ public class ButtonPress : MonoBehaviour
         txtToDisplay.SetActive(false);
     }
 
-    private void Update()
+    public void Update()
     {
         if (PlayerInZone && Input.GetMouseButtonDown(0))            //if in zone and press Left Click
 
