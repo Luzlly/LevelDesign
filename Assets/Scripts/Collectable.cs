@@ -9,11 +9,9 @@ public class Collectable : MonoBehaviour
 
     private bool PlayerInZone;                  //check if the player is in trigger
 
-    public GameObject lightorobj;
+    public GameObject obj1;
 
-    public GameObject lightorobj1;
-
-    public GameObject lightorobj2;
+    public GameObject obj2;
 
     public CollectableCount counter;
 
@@ -35,10 +33,10 @@ public class Collectable : MonoBehaviour
             counter.count++;
             txtToDisplay.SetActive(false);
             gameObject.GetComponent<AudioSource>().Play();
-            lightorobj.SetActive(!lightorobj.activeSelf);
-            lightorobj1.SetActive(!lightorobj1.activeSelf);
-            lightorobj2.SetActive(!lightorobj2.activeSelf);
+            obj1.SetActive(!obj1.activeSelf);
+            obj2.SetActive(!obj2.activeSelf);
             rend.enabled = false;
+            transform.position = new Vector3(0, 10, 0);
         }
     }
 
