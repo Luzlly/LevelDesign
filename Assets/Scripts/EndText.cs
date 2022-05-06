@@ -27,6 +27,13 @@ public class EndText : MonoBehaviour
             obj1.SetActive(!obj1.activeSelf);
             obj2.SetActive(!obj2.activeSelf);
             obj3.SetActive(!obj3.activeSelf);
+            GameObject.Find("Player").GetComponent<FPSMovement>().enabled = false;
+            GameObject.Find("Player").GetComponent<HeadBob>().StopBobbing();
+            GameObject.Find("Player").GetComponent<HeadBob>().enabled = false;
+            GameObject.Find("Main Camera").GetComponent<MouseLook>().enabled = false;
+            GameObject.Find("Player").GetComponent<CharacterController>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

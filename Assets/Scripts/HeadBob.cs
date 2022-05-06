@@ -14,7 +14,7 @@ public class HeadBob : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (Input.GetKey(KeyCode.W))
         {
@@ -62,7 +62,7 @@ public class HeadBob : MonoBehaviour
         Camera.GetComponent<Animator>().Play("HeadBob");
     }
 
-    void StopBobbing()
+    public void StopBobbing()
     {
         Camera.GetComponent<Animator>().Play("New State");
     }
