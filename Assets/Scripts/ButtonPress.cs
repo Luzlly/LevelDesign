@@ -1,3 +1,4 @@
+using DitzeGames.Effects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,7 @@ public class ButtonPress : MonoBehaviour
             lightorobj2.SetActive(!lightorobj.activeSelf);
             gameObject.GetComponent<AudioSource>().Play();
             gameObject.GetComponent<Animator>().Play("switch");
+            CameraEffects.ShakeOnce();
         }
     }
 
