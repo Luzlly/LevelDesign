@@ -29,7 +29,6 @@ public class Collectable : MonoBehaviour
     {
         if (PlayerInZone && Input.GetMouseButtonDown(0))           //if in zone and press Left Click
         {
-            
             counter.count++;
             txtToDisplay.SetActive(false);
             gameObject.GetComponent<AudioSource>().Play();
