@@ -1133,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4469410763982378685, guid: 5e8769319dc39bc43b90136a70fd995d, type: 3}
       propertyPath: m_Intensity
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4469410763982378685, guid: 5e8769319dc39bc43b90136a70fd995d, type: 3}
       propertyPath: m_RenderMode
@@ -41400,7 +41400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &977745769
 RectTransform:
   m_ObjectHideFlags: 0
